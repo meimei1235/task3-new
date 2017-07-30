@@ -1,5 +1,14 @@
 'use strict';
 
 module.exports = function createUpdatedCollection(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
-}
+   collectionA.forEach(item=>{
+     objectB.value.forEach(data => {
+       if(item.key === data){
+         item.count= item.count - 1;
+       }
+     })
+   })
+ 
+ 
+   return collectionA;
+};
